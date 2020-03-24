@@ -7,3 +7,7 @@ sh sassBreakpoints.sh
 ```
 sh sassBreakpointsNoFolder.sh
 ```
+## Lockdown or Open up WP
+```
+sh lockdownwp.sh
+```
