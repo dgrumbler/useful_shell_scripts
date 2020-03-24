@@ -1,6 +1,13 @@
-echo "Please Enter the name of the module"
+echo "Do you want to create a SASS Module?"
+select yn in "Y" "N"; do
+	case $yn in
+		Y ) $sasstype="Module"; break;;
+		N ) $sasstype="Theme"; break;;
+	esac
+done
+echo "Please Enter the name of the $sasstype"
 read varname
-echo "Module Name: $varname"
+echo "$sasstype Name: $varname"
 read -p "Please enter the author name if not correct (Rebecca Rumble): " author
 author=${author:-"Rebecca Rumble"}
 echo "Author: $author"
@@ -25,7 +32,7 @@ for f in *.scss; do
 echo "Processing $f file..."
 viewport=$(basename "$f" ".scss")
 echo "/****************************************************************" >> $f
-echo "    Theme: $varname " >> $f
+echo "    $sasstype: $varname " >> $f
 echo "    Viewport: ${viewport:1} " >> $f
 echo "    Author: $author" >> $f
 echo "****************************************************************/" >> $f
