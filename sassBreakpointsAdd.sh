@@ -45,5 +45,10 @@ echo "    $sasstype: $varname " >> $f
 echo "    Viewport: ${viewport:1} " >> $f
 echo "    Author: $author" >> $f
 echo "****************************************************************/" >> $f
+echo " " >> ../$f
+echo "/* $varname " >> ../$f
+echo "--------------------------------------------------------------------*/" >> ../$f
+echo "@import \"$folder/${viewport:1}.scss\";" >> ../$f
 done
 echo "Breakpoints added to folder"
+

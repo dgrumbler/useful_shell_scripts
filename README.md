@@ -1,4 +1,8 @@
 # Useful Shell Scripts
+## Create SCSS breakpoints in a named folder and add to theme.scss
+```
+sh sassBreakpointsAdd.sh
+```
 ## Create SCSS breakpoints in a named folder
 ```
 sh sassBreakpoints.sh
